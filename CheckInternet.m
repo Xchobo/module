@@ -61,11 +61,6 @@
 }
 
 - (int) networkCheck{
-    // 登錄通知中心
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reachabilityChanged:)
-                                                 name:kReachabilityChangedNotification
-                                               object:nil];
-    
     // 登錄網路元件
     _internetReachability = [Reachability reachabilityForInternetConnection];
 	[_internetReachability startNotifier];
